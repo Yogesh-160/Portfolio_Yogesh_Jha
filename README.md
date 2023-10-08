@@ -7,7 +7,7 @@ Also, This portolio is live and hosted through gitHub.<br/>
 
 Here is the code through which I connected my contact me form using excel:👇🏻<br/>
 
-const scriptURL = 'Your google sheet link'<br/>
+<pre><code>const scriptURL = 'Your google sheet link'<br/>
 const form = document.forms['submit-to-google-sheet']<br/>
 const msg = document.getElementById("msg")<br/>
 
@@ -23,6 +23,7 @@ form.addEventListener('submit', e => {<br/>
     })<br/>
     .catch(error => console.error('Error!', error.message))<br/>
 })<br/>
+  </code></pre>
 
 
 
