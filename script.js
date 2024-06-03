@@ -86,3 +86,13 @@ form.addEventListener('submit', e => {
     })
     .catch(error => console.error('Error!', error.message))
 })
+
+
+// Loader code
+
+let loader = document.getElementById('preloader');
+
+window.addEventListener("load",function(){
+    loader.style.display = "none";
+})
+
