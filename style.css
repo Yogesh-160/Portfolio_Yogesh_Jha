@@ -68,6 +68,38 @@ cursor: default;
     color: var(--main-color);
 }
 
+ .navbar a {
+
+    text-decoration: none;
+    
+    
+    display: inline-block;
+    
+    position: relative;
+  }
+  .navbar a:after {    
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: var(--main-color);
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+  }
+  .navbar a:hover:after { 
+    width: 100%; 
+    left: 0; 
+  }
+  @media screen and (max-height: 300px) {
+      ul {
+          margin-top: 40px;
+      }
+  }
+   
+
 #menu-icon{
     font-size: 3.6rem;
     color: var(--text-color);
