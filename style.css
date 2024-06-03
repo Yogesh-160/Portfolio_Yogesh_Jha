@@ -557,7 +557,7 @@ margin: .7rem 0;
 
 #preloader{
     background: #000 url('./Images/loader.gif') no-repeat center center;
-    background-size: 30%;
+    background-size: 20%;
     height: 100vh;
     width: 100%;
     position: fixed;
