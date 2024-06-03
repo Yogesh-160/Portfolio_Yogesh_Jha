@@ -53,8 +53,16 @@ ScrollReveal({
 // typed js
 
 const typed = new Typed('.multiple-text', {
-    strings: ['Frontend Developer','Student', 'Full Stack Developer','Coder','Programmer','Keen Learner'],
-    typeSpeed: 100,
+    strings: ['Frontend Developer', 'Full Stack Developer','Keen Learner','Meritorious Student'],
+    typeSpeed: 130,
+    backSpeed:100,
+    backDelay:1000,
+    loop:true
+});
+
+const type = new Typed('.multiple-text-internship', {
+    strings: ['Frontend Development','Web Development','Full Stack Development','MERN Stack Development'],
+    typeSpeed: 90,
     backSpeed:100,
     backDelay:1000,
     loop:true
@@ -62,7 +70,7 @@ const typed = new Typed('.multiple-text', {
 
 
 // Contact Form
-const scriptURL = 'https://script.google.com/macros/s/AKfycbzv-hDEfs700_OxPCzgj8uAzcEq9P4LSygbmpsl1nPiegyuhWaoOgLarSW6XeojcWuHPQ/exec'
+const scriptURL = 'https://script.google.com/macros/s/AKfycbxUfYmVS3zum3l0k4gZP91iSnDoW2lH9X0jUoRZaeAo5u-rQd4vJEw5khaRudlz7x_DOA/exec'
 const form = document.forms['submit-to-google-sheet']
 const msg = document.getElementById("msg")
 
