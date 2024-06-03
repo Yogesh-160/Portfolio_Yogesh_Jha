@@ -96,7 +96,7 @@ form.addEventListener('submit', e => {
 
 
 
-document.getElementById('contactForm').addEventListener('submit', function(event) {
+/*document.getElementById('contactForm').addEventListener('submit', function(event) {
     event.preventDefault(); // Prevent the form from submitting the traditional way
 
     // Retrieve form values and trim whitespace
@@ -147,7 +147,57 @@ document.getElementById('contactForm').addEventListener('submit', function(event
 
     // Uncomment the line below to allow form submission to Google Sheet or other endpoints
     this.submit(); // Only submit the form if all validations are passed
+});*/
+
+
+form.addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the form from submitting the traditional way
+
+    // Retrieve form values and trim whitespace
+    const name = document.getElementById('Name').value.trim();
+    const email = document.getElementById('Email').value.trim();
+    const contact = document.getElementById('Contact').value.trim();
+    const subject = document.getElementById('Subject').value.trim();
+    const message = document.getElementById('Message').value.trim();
+
+    let errorMessage = ''; // Initialize an empty error message string
+
+    // Validation checks
+    if (name === '') {
+        errorMessage += 'Full Name is required. ';
+    }
+
+    if (email === '') {
+        errorMessage += 'Email Address is required. ';
+    } else if (!email.includes('@')) {
+        errorMessage += 'Email must contain @ symbol. ';
+    } else if (!email.endsWith('@gmail.com')) {
+        errorMessage += 'Email must be a @gmail.com address. ';
+    }
+
+    if (contact === '') {
+        errorMessage += 'Contact Number is required. ';
+    }
+
+    if (subject === '') {
+        errorMessage += 'Email Subject is required. ';
+    }
+
+    if (message === '') {
+        errorMessage += 'Your Message is required. ';
+    }
+
+    // Check if there are any error messages
+    if (errorMessage !== '') {
+        msg.textContent = errorMessage;
+        msg.style.color = 'red';
+        return; 
+    
+    }
+    
+
 });
+
 
 // Loader code
 
