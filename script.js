@@ -94,10 +94,6 @@ form.addEventListener('submit', e => {
 
 // Contact Form validation
 
-
-
-
-
 form.addEventListener('submit', function(event) {
     event.preventDefault(); // Prevent the form from submitting the traditional way
 
@@ -154,4 +150,11 @@ let loader = document.getElementById('preloader');
 window.addEventListener("load",function(){
     loader.style.display = "none";
 })
+
+// Disable Right click function
+
+window.oncontextmenu=function(){
+    alert('Right Click is disabled');
+    return false;
+}
 
