@@ -156,3 +156,15 @@ window.addEventListener("load",function(){
 window.oncontextmenu=function(){
     return false;
 }
+
+const btn = document.getElementById('submit');
+document.addEventListener('keypress', (event)=>{
+    let keyCode = event.keyCode ? event.keyCode : event.which;
+
+    
+    if(keyCode === 13) {
+      
+      btn.click();
+    }
+      
+  });
