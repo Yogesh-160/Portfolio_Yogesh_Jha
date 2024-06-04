@@ -157,4 +157,3 @@ window.oncontextmenu=function(){
     alert('Right Click is disabled');
     return false;
 }
-
