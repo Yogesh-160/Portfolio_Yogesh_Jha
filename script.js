@@ -154,6 +154,5 @@ window.addEventListener("load",function(){
 // Disable Right click function
 
 window.oncontextmenu=function(){
-    alert('Right Click is disabled');
     return false;
 }
