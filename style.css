@@ -14,7 +14,7 @@
     --bg-color: #1f242d;
     --second-bg-color: #323946;
     --text-color: #fff;
-    --main-color: #0ef;
+    --main-color: /*#0ef*/#bcfd49;
 }
 
 html {
@@ -615,5 +615,4 @@ span {
     z-index: 100;
     display: flex;
     justify-content: center;
-}r;
 }

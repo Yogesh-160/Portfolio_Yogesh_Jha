@@ -60,13 +60,6 @@ const typed = new Typed('.multiple-text', {
     loop:true
 });
 
-const type = new Typed('.multiple-text-internship', {
-    strings: ['Frontend Development','Web Development','Full Stack Development','MERN Stack Development'],
-    typeSpeed: 90,
-    backSpeed:100,
-    backDelay:1000,
-    loop:true
-});
 
 
 // Contact Form
