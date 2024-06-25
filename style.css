@@ -241,6 +241,23 @@ span {
     width: 100%;
 }
 
+.achievements {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    background: var(--bg-color);
+    
+}
+
+.achievements-content p {
+    font-size: 1.6rem;
+    margin: 2rem 0 3rem;
+    width: 100%;
+    
+}
+
 .portfolio {
     background: var(--bg-color);
 }

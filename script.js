@@ -48,6 +48,9 @@ ScrollReveal({
  ScrollReveal().reveal('.home-img, .certificates-container, .portfolio-box, .contact', { origin: 'bottom' });
  ScrollReveal().reveal('.home-content h1, .about-img', { origin: 'left' });
  ScrollReveal().reveal('.home-content p, .about-content', { origin: 'right' });
+ ScrollReveal().reveal('.home-content p, .achievements-content', { origin: 'right' });
+ ScrollReveal().reveal('.home-content p, .experience-content', { origin: 'right' });
+
 
 
 // typed js
@@ -146,9 +149,9 @@ window.addEventListener("load",function(){
 
 // Disable Right click function
 
-window.oncontextmenu=function(){
-    return false;
-}
+// window.oncontextmenu=function(){
+//     return false;
+// }
 
 const btn = document.getElementById('submit');
 document.addEventListener('keypress', (event)=>{
