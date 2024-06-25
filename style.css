@@ -259,10 +259,10 @@ span {
 }
 /* Basic styling for experience section */
 .experience-section {
-    height: 100vh; /* Remove fixed height for responsiveness */
-    min-height: 100vh; /* Ensure section covers viewport height at least */
+    height: auto; 
+    min-height: 100vh; 
     background-color: var(--second-bg-color);
-    padding: 80px 0; /* Adjust padding as needed */
+    padding: 80px 0; 
   }
   
   
@@ -271,16 +271,16 @@ span {
     flex-wrap: wrap;
     justify-content: space-evenly;
     gap: 2rem;
-    margin-top: -3rem; /* Adjust margin for better alignment */
+    margin-top: 5rem; 
   }
   
   .experience-item {
     display: flex;
     align-items: center;
-    height: 30vh;
+    height: 60vh;
     width: 100%;
     max-width: 600px;
-    background-color: var(--bg-color); /* Use your background color variable */
+    background-color: var(--bg-color);  
     padding: 1.5rem;
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
@@ -293,7 +293,7 @@ span {
   }
   
   .experience-img {
-    flex: 0 0 30%; /* Adjust image width as needed */
+    flex: 0 0 30%;
     margin-right: 2rem;
   }
   
@@ -306,9 +306,13 @@ span {
     flex: 1;
   }
   
+  .exp-para{
+    font-size: 1.3rem;
+  }
+
   .experience-caption {
-    font-size: 1.2rem; /* Adjust caption font size */
-    color: #ccc; /* Use a color suitable for captions */
+    font-size: 1.3rem; 
+    color: #ccc;
     line-height: 1.6;
   }
   
@@ -325,41 +329,48 @@ span {
     left: -100%;
     width: 100%;
     height: 100%;
-    background-color: rgba(255, 255, 255, 0.05); /* Adjust overlay color */
+    background-color: rgba(255, 255, 255, 0.05); 
     transition: left 0.3s ease;
   }
   
   .experience-item:hover::before {
     left: 0;
   }
+
+  
   
   /* Responsive adjustments */
   @media (max-width: 768px) {
-    .experience {
-      justify-content: center; /* Center items on smaller screens */
-      margin-top: -2rem; /* Adjust margin for alignment */
-    }
-  
     .experience-item {
-      width: 90%; /* Adjust width for full-width on smaller screens */
-      max-width: 100%; /* Ensure item takes full width */
-      margin-bottom: 2rem; /* Add margin between items */
+      flex-direction: column; 
+      align-items: center; 
+      text-align: center; 
     }
   
     .experience-img {
-      flex: 0 0 40%; /* Adjust image width for smaller screens */
-      margin-right: 1rem; /* Reduce margin for smaller screens */
+      order: -1; 
+      flex: 0 0 40%; 
+      margin-right: 0; 
+      margin-bottom: 1rem; 
+
+    }
+  
+    .experience-content {
+      order: 1; 
+      flex: 1; 
+      text-align: left; 
     }
   }
   
+  
   @media (max-width: 576px) {
     .experience-item {
-      height: auto; /* Allow items to grow in height as per content */
+      height: auto; 
     }
   
     .experience-img {
-      flex: 0 0 50%; /* Further adjust image width for smallest screens */
-      margin-right: 0.5rem; /* Reduce margin for smallest screens */
+      flex: 0 0 50%; 
+      margin-right: 0.5rem;
     }
   }
   
