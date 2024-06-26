@@ -76,10 +76,7 @@ section {
 }
 
 .navbar a {
-
     text-decoration: none;
-
-
     display: inline-block;
 
     position: relative;
@@ -262,22 +259,26 @@ span {
     height: auto; 
     min-height: 100vh; 
     background-color: var(--second-bg-color);
-    padding: 80px 0; 
-  }
-  
-  
-  .experience {
+    padding: 14rem 2rem;
+
+}
+
+.heading {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 3rem; 
+}
+
+.experience {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     gap: 2rem;
-    margin-top: 5rem; 
-  }
-  
-  .experience-item {
+}
+
+.experience-item {
     display: flex;
     align-items: center;
-    height: 60vh;
     width: 100%;
     max-width: 600px;
     background-color: var(--bg-color);  
@@ -285,44 +286,18 @@ span {
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .experience-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  }
-  
-  .experience-img {
-    flex: 0 0 30%;
-    margin-right: 2rem;
-  }
-  
-  .experience-img img {
-    max-width: 100%;
-    border-radius: 8px;
-  }
-  
-  .experience-content {
-    flex: 1;
-  }
-  
-  .exp-para{
-    font-size: 1.3rem;
-  }
-
-  .experience-caption {
-    font-size: 1.3rem; 
-    color: #ccc;
-    line-height: 1.6;
-  }
-  
-  /* Animation for left side transition */
-  .experience-item {
     position: relative;
     overflow: hidden;
-  }
-  
-  .experience-item::before {
+    cursor: pointer;
+    margin: 1rem; /* Ensures margin from all sides */
+}
+
+.experience-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.experience-item::before {
     content: '';
     position: absolute;
     top: 0;
@@ -331,49 +306,80 @@ span {
     height: 100%;
     background-color: rgba(255, 255, 255, 0.05); 
     transition: left 0.3s ease;
-  }
-  
-  .experience-item:hover::before {
+}
+
+.experience-item:hover::before {
     left: 0;
-  }
+}
 
-  
-  
-  /* Responsive adjustments */
-  @media (max-width: 768px) {
+.experience-img {
+    flex: 0 0 30%;
+    margin-right: 2rem;
+}
+
+.experience-img img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.experience-content {
+    flex: 1;
+}
+
+.exp-para, .experience-caption {
+    font-size: 1.3rem;
+    color: #ccc;
+    line-height: 1.6;
+}
+
+.exp-para {
+    margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
     .experience-item {
-      flex-direction: column; 
-      align-items: center; 
-      text-align: center; 
+        flex-direction: column; 
+        align-items: center; 
+        text-align: center; 
     }
-  
-    .experience-img {
-      order: -1; 
-      flex: 0 0 40%; 
-      margin-right: 0; 
-      margin-bottom: 1rem; 
 
+    .experience-img {
+        order: -1; 
+        flex: 0 0 40%; 
+        margin-right: 0; 
+        margin-bottom: 1rem; 
     }
-  
+
     .experience-content {
-      order: 1; 
-      flex: 1; 
-      text-align: left; 
+        order: 1; 
+        flex: 1; 
+        text-align: left; 
     }
-  }
-  
-  
-  @media (max-width: 576px) {
+}
+
+@media (max-width: 576px) {
     .experience-item {
-      height: auto; 
+        height: auto; 
     }
-  
+
     .experience-img {
-      flex: 0 0 50%; 
-      margin-right: 0.5rem;
+        flex: 0 0 50%; 
+        margin-right: 0.5rem;
     }
-  }
-  
+
+    .experience-content {
+        text-align: center;
+    }
+
+    .experience-caption {
+        font-size: 1.1rem;
+    }
+
+    .exp-para {
+        font-size: 1.1rem;
+    }
+}
+
 
 .portfolio {
     background: var(--bg-color);
