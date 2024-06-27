@@ -84,12 +84,7 @@ form.addEventListener('submit', e => {
 })
 
 
-
-
-
-
 // Contact Form validation
-
 form.addEventListener('submit', function(event) {
     event.preventDefault(); // Prevent the form from submitting the traditional way
 
@@ -100,43 +95,39 @@ form.addEventListener('submit', function(event) {
     const subject = document.getElementById('Subject').value.trim();
     const message = document.getElementById('Message').value.trim();
 
-    let errorMessage = ''; // Initialize an empty error message string
+    let errorMessage = '';
 
     // Validation checks
-    if (name === '') {
+    if (!name) {
         errorMessage += 'Full Name is required. ';
     }
 
-    if (email === '') {
+    if (!email) {
         errorMessage += 'Email Address is required. ';
-    } else if (!email.includes('@')) {
-        errorMessage += 'Email must contain @ symbol. ';
-    } else if (!email.endsWith('@gmail.com')) {
-        errorMessage += 'Email must be a @gmail.com address. ';
+    } else if (!email.includes('@') || !email.endsWith('@gmail.com')) {
+        errorMessage += 'Please enter a valid Gmail address. ';
     }
 
-    if (contact === '') {
+    if (!contact) {
         errorMessage += 'Contact Number is required. ';
     }
 
-    if (subject === '') {
+    if (!subject) {
         errorMessage += 'Email Subject is required. ';
     }
 
-    if (message === '') {
+    if (!message) {
         errorMessage += 'Your Message is required. ';
     }
 
-    // Check if there are any error messages
-    if (errorMessage !== '') {
+    // Display error message if any
+    if (errorMessage) {
         msg.textContent = errorMessage;
         msg.style.color = 'red';
-        return; 
-    
-    }
-    
-
+        return;
+    }// Form is valid, proceed with submission
 });
+
 
 
 // Loader code
@@ -149,9 +140,9 @@ window.addEventListener("load",function(){
 
 // Disable Right click function
 
-window.oncontextmenu=function(){
-    return false;
-}
+// window.oncontextmenu=function(){
+//     return false;
+// }
 
 const btn = document.getElementById('submit');
 document.addEventListener('keypress', (event)=>{
