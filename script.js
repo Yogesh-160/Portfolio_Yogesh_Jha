@@ -140,9 +140,9 @@ window.addEventListener("load",function(){
 
 // Disable Right click function
 
-// window.oncontextmenu=function(){
-//     return false;
-// }
+window.oncontextmenu=function(){
+    return false;
+}
 
 const btn = document.getElementById('submit');
 document.addEventListener('keypress', (event)=>{
