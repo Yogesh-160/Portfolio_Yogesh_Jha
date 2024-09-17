@@ -747,7 +747,7 @@ span {
 }
 
 
-#preloader {
+/* #preloader {
     background: #000 url('./Images/loader.gif') no-repeat center center;
     background-size: 20%;
     height: 100vh;
@@ -756,4 +756,4 @@ span {
     z-index: 100;
     display: flex;
     justify-content: center;
-}
+} */

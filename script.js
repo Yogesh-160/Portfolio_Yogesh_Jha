@@ -132,11 +132,11 @@ form.addEventListener('submit', function(event) {
 
 // Loader code
 
-let loader = document.getElementById('preloader');
+// let loader = document.getElementById('preloader');
 
-window.addEventListener("load",function(){
-    loader.style.display = "none";
-})
+// window.addEventListener("load",function(){
+//     loader.style.display = "none";
+// })
 
 // Disable Right click function
 
